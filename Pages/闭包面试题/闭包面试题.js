@@ -22,10 +22,10 @@
 // test()()  // 10 ni'ming
 
 
-var test = (function() {
+var test = (function () {
     var num = 0
     return () => {
-        return num++
+        return num
     }
 }())
 
@@ -33,5 +33,5 @@ for (var i = 0; i < 10; i++) {
     test()
 }
 
-console.log(test())
+console.log('test()', test())
 
