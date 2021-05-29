@@ -54,10 +54,10 @@ function foo (a,b) {
     }
 }
 
-// var func1 = foo(0) // undefined
-// func1.foo(1) // 0
-// func1.foo(2) // 0
-// func1.foo(3) // 08
+var func1 = foo(0) // undefined
+func1.foo(1) // 0
+func1.foo(2) // 0
+func1.foo(3) // 0
 // var func2 = foo(0).foo(1).foo(2).foo(3) // undefined 0 1 2
 var fun3 = foo(0).foo(1) // undefined 0
 fun3.foo(2) // 1

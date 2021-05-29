@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a929a589-289f-45bf-b615-9133b2874652" name="默认变更列表" comment="【FEAT】闭包面试题">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/JavaScriptTheory.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pages/this指向/myCall.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pages/this指向/箭头函数和普通函数.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/闭包面试题/闭包面试题.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/闭包面试题/闭包面试题.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1sCLyRgKn9B6ltrV4IqI0bDscZ9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Pages/闭包面试题" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Node.js.箭头函数和普通函数.js">
+    <configuration name="闭包面试题.js" type="NodeJSConfigurationType" temporary="true" path-to-node="$USER_HOME$/.nvm/versions/node/v12.16.1/bin/node" nameIsGenerated="true" path-to-js-file="闭包面试题.js" working-dir="$PROJECT_DIR$/Pages/闭包面试题">
+      <method v="2" />
+    </configuration>
+    <configuration name="箭头函数和普通函数.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Pages/this指向/箭头函数和普通函数.js" working-dir="$PROJECT_DIR$/Pages/this指向">
+      <method v="2" />
+    </configuration>
+    <configuration name="myCall.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Pages/this指向/myCall.js" working-dir="$PROJECT_DIR$/Pages/this指向">
+      <method v="2" />
+    </configuration>
+    <configuration name="循环体结合setTimeout.js" type="NodeJSConfigurationType" temporary="true" path-to-node="$USER_HOME$/.nvm/versions/node/v12.16.1/bin/node" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Pages/闭包面试题/循环体结合setTimeout.js" working-dir="$PROJECT_DIR$/Pages">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.箭头函数和普通函数.js" />
+        <item itemvalue="Node.js.myCall.js" />
+        <item itemvalue="Node.js.闭包面试题.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="a929a589-289f-45bf-b615-9133b2874652" name="默认变更列表" comment="" />
+      <created>1620371879615</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620371879615</updated>
+      <workItem from="1620371882539" duration="102000" />
+      <workItem from="1620372002517" duration="852000" />
+      <workItem from="1621307575005" duration="9794000" />
+      <workItem from="1621851875439" duration="8736000" />
+      <workItem from="1622084581575" duration="46000" />
+      <workItem from="1622112416772" duration="32000" />
+      <workItem from="1622184097814" duration="7865000" />
+    </task>
+    <task id="LOCAL-00001" summary="【FEAT】闭包面试题">
+      <created>1621588946228</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1621588946228</updated>
+    </task>
+    <task id="LOCAL-00002" summary="【FEAT】闭包面试题">
+      <created>1621854026937</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1621854026937</updated>
+    </task>
+    <task id="LOCAL-00003" summary="【FEAT】闭包面试题">
+      <created>1622112426413</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1622112426413</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="【FEAT】闭包面试题" />
+    <option name="LAST_COMMIT_MESSAGE" value="【FEAT】闭包面试题" />
+  </component>
+</project>
