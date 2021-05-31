@@ -12,11 +12,11 @@ var me = {
   name: 'lxy',
 };
 
-function showName() {
-  console.log(this.name);
+function showName(name) {
+  console.log(this.name +',' + name);
 }
 
-showName(); // 浏览器输出 zyt ，showName中的this指向window
+showName('zhangsan'); // 浏览器输出 zyt ，showName中的this指向window
 
 // 使用call API 改变this 指向
 showName.call(me) // 输出lxy
@@ -40,6 +40,12 @@ Function.prototype.myCall = function (context) {
   delete  context.func
 }
 
-showName.myCall(me)
+Function.prototype.myCall = function (context, ...args) {
+  // this 指向调用myCall的方法（方法也是对象，this的指向指向调用它的对象）
+  context.func = this
+  console.log(this)
+  context.func(args)
+  delete context.func
+}
 
-console.log(Function.prototype)
+showName.myCall(me, 'zyt')

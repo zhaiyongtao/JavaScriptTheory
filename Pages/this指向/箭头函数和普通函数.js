@@ -7,6 +7,11 @@
  */
 
 var a= 1;
+
+function fn () {
+    console.log('this.a',this.a)
+}
+fn ()
 var obj = {
     a:2,
     showA:() => {
@@ -20,11 +25,12 @@ var obj2 = {
         console.log(this.a)
     }
 }
-obj.showA() // 浏览器中输出 1 ，箭头函数的this会在书写阶段帮到到他的父级作用域this上,箭头函数的this指向是静态，无论怎么调用它，它都无法再为他指定目标对象，词法作用域
+obj.showA() // 浏览器中输出 1 ，箭头函数的this会在书写阶段绑定到到他的父级作用域this上,箭头函数的this指向是静态，无论怎么调用它，它都无法再为他指定目标对象，词法作用域
 
 obj2.showA() // 输出3
 
 
+// 构造函数
 function Person (name) {
     this.name = name;
     this.a = 2
@@ -35,3 +41,5 @@ function Person (name) {
 
 var person = new Person('zyt')
 person.sayhello()
+
+

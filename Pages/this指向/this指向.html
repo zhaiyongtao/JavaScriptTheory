@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this 指向</title>
+</head>
+<body>
+<h2>
+    this 永远指向最后调用它的那个对象
+</h2>
+
+<script>
+    var a = 1;
+
+    function fn() {
+        var a = 2;
+        console.log(this.a) // 输出 1
+    }
+
+    fn()
+
+    var name = 'zyt'
+
+    function foo() {
+        var name = 'lxy'
+        innerFoo()
+
+        function innerFoo() {
+            console.log('foo', this.name) // 输出 foo zyt
+        }
+    }
+
+    foo()
+
+    function goo() {
+        let name = 'lxy';
+        let innerGoo = () => {
+            console.info(this)
+            console.log('goo', this.name) // goo zyt 箭头函数的this是继承父执行上下文里面的this
+        }
+        innerGoo()
+    }
+
+    goo()
+
+    // 第一种解释：箭头函数中的this，指向的是函数定义位置（定义作用域）的上下文this
+    // 第二种解释：箭头函数的this是继承父执行上下文里面的this
+    var obj = {
+        name: 'mgy',
+        showA: () => {
+            console.log(this.name) // zyt 因为obj对象不能产生作用域，所以箭头函数相当于定义在全局作用域，this指向全局
+        }
+    }
+
+    obj.showA()
+
+    var obj2 = {
+        name: 'mgy',
+        showA: function () {
+            console.log(this.name) // mgy
+        }
+    }
+
+    obj2.showA()
+
+    var obj3 = {
+        a: function() {
+            console.log(this); // window
+        }
+    }
+
+    var b = obj3.a;
+    b(); // this 指向 window , 调用方法的对象是window。 普通函数，this指向调用函数的对象。 this指向函数运行（调用）时所在的执行环境【《JavaScript高级程序设计》4.2节执行环境及作用域】的（变量）对象（简单地，this指向函数的调用者）
+
+    var obj4 = {
+        a: () => {
+            console.log(this) // 指向window
+        }
+    }
+    obj4.a()
+</script>
+</body>
+</html>
