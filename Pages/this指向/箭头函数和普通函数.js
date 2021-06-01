@@ -11,7 +11,7 @@ var a= 1;
 function fn () {
     console.log('this.a',this.a)
 }
-fn ()
+fn ()  // 1
 var obj = {
     a:2,
     showA:() => {
@@ -35,7 +35,7 @@ function Person (name) {
     this.name = name;
     this.a = 2
     this.sayhello= () => {
-        console.log( 'hello', this) // this => { name: 'zyt', a: 2, sayhello: [Function] }
+        console.log( 'hello', this.a) // this => { name: 'zyt', a: 2, sayhello: [Function] }
     }
 }
 
