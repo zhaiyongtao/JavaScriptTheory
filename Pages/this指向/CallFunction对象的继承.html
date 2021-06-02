@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>call的用法-对象的继承</title>
+</head>
+<body>
+<h2>
+  call的用法-对象的继承
+</h2>
+<script>
+  function parentFn () {
+    this.a = 1;
+    this.print= function (){
+      console.log('parentFn')
+    }
+  }
+
+  function childFn() {
+    parentFn.call(this)
+    this.print()
+  }
+  childFn()
+
+
+</script>
+</body>
+</html>

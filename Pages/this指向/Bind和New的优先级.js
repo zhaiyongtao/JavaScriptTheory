@@ -11,11 +11,8 @@ function f() {
     console.log(this)
     return this;
 }
-
-const g = f.bind({ a: 1 });
-
-g();  // {a:1}
-
+const g = f.bind({a: 1});
+g();
 const obj = new g(); // f {}
 
 // instanceof都为true
@@ -29,8 +26,17 @@ console.log(obj.constructor) // [Function: f]
 
 console.log(g.constructor) // [Function: Function]
 
-console.log(obj.__proto__) // f {}
+console.log(' 1',obj.__proto__.__proto__) // f {}
 console.log(g.prototype) // undefined
 
-console.log( f.prototype) //f {}
+console.log(f.prototype) //f {}
+
+console.log(f[Symbol.hasInstance](obj));
+console.log(g[Symbol.hasInstance](obj));
+
+
+console.log(f.__proto__)
+
+console.log(g.__proto__)
+
 
