@@ -19,8 +19,9 @@ function childFn() {
 }
 childFn()
 
-console.info('parentFn.__proto__',parentFn.__proto__)  //[Function]
+console.info('parentFn.__proto__',parentFn.__proto__)  //[Function] (native code)
 console.info('parentFn.prototype',parentFn.prototype) // parentFn {}
-console.info('parentFn.prototype.__proto__',parentFn.prototype.__proto__) //{}
+console.info('parentFn.prototype.__proto__',parentFn.prototype.__proto__) // Object{}
 console.info('parentFn.prototype.constructor',parentFn.prototype.constructor) //{}
+console.info('parentFn.prototype.constructor',parentFn.prototype.constructor === parentFn)
 console.info('parentFn.prototype === parentFn.__proto__',parentFn.prototype === parentFn.__proto__)

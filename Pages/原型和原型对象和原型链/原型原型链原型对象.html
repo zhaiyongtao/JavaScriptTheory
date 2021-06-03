@@ -15,18 +15,28 @@
       console.log('parentFn')
     }
   }
-
+const newPf = new parentFn()
   function childFn() {
     parentFn.call(this)
     this.print()
   }
   childFn()
 
-  console.info('parentFn.__proto__',parentFn.__proto__)  //[Function]
-  console.info('parentFn.prototype',parentFn.prototype) // parentFn {}
-  console.info('parentFn.prototype.__proto__',parentFn.prototype.__proto__) //{}
-  console.info('parentFn.prototype.constructor',parentFn.prototype.constructor) //{}
-  console.info('parentFn.prototype === parentFn.__proto__',parentFn.prototype === parentFn.__proto__)
+  console.info('parentFn.__proto__',parentFn.__proto__)  //[Function] (native code)
+  console.info('newPf.__proto__ === parentFn.prototype', newPf.__proto__ === parentFn.prototype) // true
+  console.info('parentFn.prototype',parentFn.prototype)
+  // {constructor: ƒ}
+  // constructor: ƒ parentFn()
+  // __proto__: Object
+  console.info('parentFn.prototype.__proto__',parentFn.prototype.__proto__) // Object {constructor}
+  console.info('parentFn.prototype.constructor',parentFn.prototype.constructor)
+  // parentFn () {
+  //     this.a = 1;
+  //     this.print= function (){
+  //         console.log('parentFn')
+  //     }
+  // }
+  console.info('parentFn.prototype.constructor === parentFn',parentFn.prototype.constructor === parentFn)
 </script>
 </body>
 </html>

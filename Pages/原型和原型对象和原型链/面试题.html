@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>面试题</title>
+</head>
+<body>
+<h2>面试题</h2>
+<script>
+
+    // foo = function(){
+    //   this.myName = "Foo function.";
+    // }
+    // foo.prototype.sayHello = function(){
+    //   console.log(this.myName); // undefined
+    // }
+    // foo.prototype.bar = function(){
+    //   setTimeout(this.sayHello, 1000);
+    // }
+    // var f = new foo;
+    // f.bar();
+
+
+    // foo1 = function(){
+    //     this.myName = "Foo function.";
+    // }
+    // foo1.prototype.sayHello = function () {
+    //     console.log(this)
+    //     console.log(this.myName);
+    // }
+    // foo1.prototype.bar = function (){
+    //     setTimeout(()=>{
+    //         this.sayHello() // Foo function.
+    //     }, 1000);
+    // }
+    // var f1 = new foo1();
+    // f1.bar();
+
+
+    foo2 = function () {
+        this.myName = "Foo function.";
+    }
+
+    // 这里不可以使用箭头函数，如果使用的话，this将指向window，且箭头函数是词法作用域，this指向继承父类this指向
+    foo2.prototype.sayHello = function () {
+        console.log(this) //foo2 {myName: "Foo function."}
+        console.log(this.myName); // Foo function.
+    }
+    foo2.prototype.bar = function () {
+        setTimeout(this.sayHello.call(f2), 1000)
+        // 等同于 this
+        // setTimeout(this.sayHello.call(this), 1000)
+    }
+    var f2 = new foo2();
+
+
+    foo3 = function () {
+        this.myName = "Foo function.";
+    }
+
+    // 这里不可以使用箭头函数，如果使用的话，this将指向window，且箭头函数是词法作用域，this指向继承父类this指向
+    foo3.prototype.sayHello = function () {
+        console.log(this) //foo2 {myName: "Foo function."}
+        console.log(this.myName); // Foo function.
+    }
+    foo3.prototype.bar = function () {
+        let _this = this
+        setTimeout(function (){
+            _this.sayHello()
+        },1000)
+        //等同于
+        // setTimeout(_this.sayHello(), 1000)
+
+    }
+    var f3 = new foo3();
+    f3.bar();
+</script>
+</body>
+</html>
