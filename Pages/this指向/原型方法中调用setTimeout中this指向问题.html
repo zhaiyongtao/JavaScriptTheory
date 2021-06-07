@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原型方法中调用setTimeout中this指向问题</title>
+</head>
+<body>
+<h2>
+    原型方法中调用setTimeout中this指向问题
+</h2>
+<script>
+    function Person() {
+        this.name = 'zyt';
+    }
+
+    Person.prototype.sex = 'male';
+    Person.prototype.init = function (type) {
+        console.log('***********************init start*********************')
+        console.log('In Init => this：', this)
+        console.log('***********************init end*********************')
+    }
+
+    Person.prototype.getName = function () {
+        console.log('***********************getName start*********************')
+        console.log('In getName => this：', this)
+        console.log('In getName => Name：', this.name)
+        this.init()
+        console.log('***********************getName end*********************')
+    }
+
+    let p = new Person()
+    p.init()  // In Init => this： Person { name: 'zyt' }
+    p.getName() // In getName => this： Person { name: 'zyt' } / In getName => Name： zyt / In Init => this： Person { name: 'zyt' }
+
+    Person.prototype.getName1 = function () {
+        console.log('***********************getName1 start*********************')
+        console.log('In getName1 => this：', this) // In getName1 => this： Person { name: 'zyt' }
+        console.log('In getName1 => Name：', this.name) // In getName1 => Name： zyt
+        setTimeout(this.init, 1000) // In Init => this: window
+        console.log('***********************getName1 end*********************')
+    }
+
+    let p1 = new Person()
+    p1.init() // In Init => this： Person { name: 'zyt' }
+    p1.getName1()
+    // 解决办法 （1） 失败
+    Person.prototype.getName2 = function () {
+        console.log('***********************getName2 start*********************')
+        console.log('In getName2 => this：', this) // In getName2 => this： Person {name: "zyt"}
+        console.log('In getName2 => Name：', this.name) // In getName2 => Name： zyt
+        setTimeout(function () {
+            console.log('***********************getName2 setTimeout2 start*********************')
+            console.log('getName2 setTimeout => this', this) // this => window
+            this.init() // In Init => this: window, window上没有init方法，导致报错
+            console.log('***********************getName2 setTimeout2 start*********************')
+        }, 1000)
+        console.log('***********************getName2 end*********************')
+
+    }
+
+    let p2 = new Person()
+    p2.init() //  In Init => this： Person {name: "zyt"}
+    p2.getName2()
+    // 按照普通对象的方法，我们在setTimeout的中加上一层wrapper 函数就可以正常输出了，但是上面的方法并没有正常输出，
+    // 原因就是因为这里的延时回调函数中对init()的调用是this指针，而之前的例子是obj.init()没有this指向的问题
+    // 解决方法（2）
+    Person.prototype.getName3 = function () {
+        console.log('***********************getName3 start*********************')
+        console.log('In getName3 => this：', this) // In getName2 => this： Person {name: "zyt"}
+        console.log('In getName3 => Name：', this.name) // In getName2 => Name： zyt
+        setTimeout(() => {
+            console.log('***********************getName3 setTimeout3 start*********************')
+            console.log('getName3 setTimeout => this', this.name) // this =>  Person {name: "zyt"} name=> zyt
+            this.init() // In Init => this=>Person {name: "zyt"}
+            console.log('***********************getName3 setTimeout3 start*********************')
+        }, 1000)
+        console.log('***********************getName3 end*********************')
+    }
+
+    let p3 = new Person()
+    p3.init() //  In Init => this： Person {name: "zyt"}
+    p3.getName3()
+
+    // 解决方法（3）call bind apply
+    Person.prototype.getName4 = function () {
+        console.log('***********************getName4 start*********************')
+        console.log('In getName4 => this：', this) // In getName2 => this： Person {name: "zyt"}
+        console.log('In getName4 => Name：', this.name) // In getName2 => Name： zyt
+        setTimeout(this.init().call(p4), 1000) // In Init => this： Person {name: "zyt"}
+        // 等价于，setTimeout()的this指向是跟随上下文的，所以call(this)的this指向的是Person{}
+        // setTimeout(this.init().call(this), 1000) // In Init => this： Person {name: "zyt"}
+        console.log('***********************getName4 end*********************')
+    }
+
+    let p4 = new Person()
+    p4.getName4()
+
+    // 等价于
+    Person.prototype.getName5 = function () {
+        setTimeout(function () {
+            this.init() // In Init => this： Person {name: "zyt"},  setTimeout()的第一个this是跟随上下文的所以call(this)跟随上下文
+        }.call(this), 1000)
+    }
+    let p5 = new Person()
+    p5.getName5()
+
+    // 解决方法（4）
+    Person.prototype.getName6 = function () {
+        let _this = this
+        setTimeout(function () {
+            _this.init() // In Init => this： Person {name: "zyt"},  暂存this
+        }, 1000)
+    }
+    let p6 = new Person()
+    p6.getName6()
+
+    // 等价于
+    Person.prototype.getName7 = function () {
+        let _this = this
+        setTimeout( _this.init(), 1000) // In Init => this： Person {name: "zyt"},  暂存this
+    }
+    let p7 = new Person()
+    p7.getName7()
+
+</script>
+</body>
+</html>
