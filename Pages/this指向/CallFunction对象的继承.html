@@ -11,14 +11,17 @@
 <script>
   function parentFn () {
     this.a = 1;
-    this.print= function (){
+    this.printFn= function (){
       console.log('parentFn')
     }
   }
 
   function childFn() {
-    parentFn.call(this)
-    this.print()
+      // this 指向window
+      console.log(this)
+     parentFn.call(this)
+      // 通过call将parentFn的this指向指向window，并执行parentFn
+    this.printFn()
   }
   childFn()
 

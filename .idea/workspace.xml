@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a929a589-289f-45bf-b615-9133b2874652" name="默认变更列表" comment="【FEAT】1）setTimeout中的this的指向问题">
-      <change afterPath="$PROJECT_DIR$/Pages/this指向/原型方法中调用setTimeout中this指向问题.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pages/this指向/原型方法中调用setTimeout中this指向问题.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/this指向/setTimeout中this指向问题.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/this指向/普通对象的函数使用setTimeout中this指向问题.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/this指向/setTimeout中this指向问题.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/this指向/普通对象的函数使用setTimeout中this指向问题.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/this指向/CallFunction对象的继承.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/this指向/CallFunction对象的继承.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +42,8 @@
       <recent name="$PROJECT_DIR$/Pages/闭包面试题" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript 调试.原型方法中调用setTimeout中this指向问题.html">
-    <configuration name="面试题.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/JavaScriptTheory/Pages/原型和原型对象和原型链/面试题.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript 调试.CallFunction对象的继承.html">
+    <configuration name="CallFunction对象的继承.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/JavaScriptTheory/Pages/this指向/CallFunction对象的继承.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="普通对象的函数使用setTimeout中this指向问题.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/JavaScriptTheory/Pages/this指向/普通对象的函数使用setTimeout中this指向问题.html" useBuiltInWebServerPort="true">
@@ -69,11 +66,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript 调试.CallFunction对象的继承.html" />
         <item itemvalue="JavaScript 调试.原型方法中调用setTimeout中this指向问题.html" />
         <item itemvalue="Node.js.原型方法中调用setTimeout中this指向问题.js" />
         <item itemvalue="JavaScript 调试.普通对象的函数使用setTimeout中this指向问题.html" />
         <item itemvalue="Node.js.普通对象的函数使用setTimeout中this指向问题.js" />
-        <item itemvalue="JavaScript 调试.面试题.html" />
       </list>
     </recent_temporary>
   </component>
@@ -96,7 +93,7 @@
       <workItem from="1622431074515" duration="16476000" />
       <workItem from="1622621685049" duration="4000" />
       <workItem from="1622621809358" duration="554000" />
-      <workItem from="1622622466840" duration="25776000" />
+      <workItem from="1622622466840" duration="27743000" />
     </task>
     <task id="LOCAL-00001" summary="【FEAT】闭包面试题">
       <created>1621588946228</created>
@@ -154,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622723189503</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="【FEAT】1）setTimeout中的this的指向问题">
+      <created>1623062277055</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1623062277055</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
