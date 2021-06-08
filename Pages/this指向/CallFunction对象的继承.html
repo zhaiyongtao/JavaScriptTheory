@@ -6,26 +6,40 @@
 </head>
 <body>
 <h2>
-  call的用法-对象的继承
+    call的用法-对象的继承
 </h2>
 <script>
-  function parentFn () {
-    this.a = 1;
-    this.printFn= function (){
-      console.log('parentFn')
+    function parentFn() {
+        this.a = 1;
+        this.printFn = function () {
+            console.log('parentFn')
+        }
     }
-  }
 
-  function childFn() {
-      // this 指向window
-      console.log(this)
-     parentFn.call(this)
-      // 通过call将parentFn的this指向指向window，并执行parentFn
-    this.printFn()
-  }
-  childFn()
+    function childFn() {
+        // this 指向window
+        console.log(this)
+        parentFn.call(this)
+        // 通过call将parentFn的this指向指向window，并执行parentFn
+        this.printFn()
+    }
 
+    childFn()
 
+    // 借用方法
+
+    let listObj = {
+        0: 0,
+        1: 1,
+        2: 2,
+        length: 3
+    }
+    // 通过使用call方法 改变数组方法slice的z指向让类数组对象成为新的数组
+    let newListObj = Array.prototype.slice.call(listObj)
+    console.log(newListObj)
+    newListObj.slice(0, 2)
+    console.log(newListObj.slice(0, 2))
+    console.log(newListObj.includes(1))
 </script>
 </body>
 </html>

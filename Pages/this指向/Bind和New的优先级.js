@@ -12,7 +12,7 @@ function f() {
     return this;
 }
 const g = f.bind({a: 1});
-g();
+g(); //（1）this =>  {a:1}
 const obj = new g(); // f {}
 
 // instanceof都为true
