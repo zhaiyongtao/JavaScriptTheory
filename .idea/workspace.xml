@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a929a589-289f-45bf-b615-9133b2874652" name="默认变更列表" comment="【FIX】call的用法-对象的继承">
-      <change afterPath="$PROJECT_DIR$/Pages/this指向/Bind的基本使用.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pages/this指向/Bind的实现.js" afterDir="false" />
+    <list default="true" id="a929a589-289f-45bf-b615-9133b2874652" name="默认变更列表" comment="【FIX】Bind的实现">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/this指向/Bind和New的优先级.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/this指向/Bind和New的优先级.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/this指向/CallFunction对象的继承.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/this指向/CallFunction对象的继承.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/this指向/Bind的实现.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/this指向/Bind的实现.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +93,7 @@
       <workItem from="1622431074515" duration="16476000" />
       <workItem from="1622621685049" duration="4000" />
       <workItem from="1622621809358" duration="554000" />
-      <workItem from="1622622466840" duration="37090000" />
+      <workItem from="1622622466840" duration="40794000" />
     </task>
     <task id="LOCAL-00001" summary="【FEAT】闭包面试题">
       <created>1621588946228</created>
@@ -168,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623065097416</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="【FIX】Bind的实现">
+      <created>1623149515011</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1623149515011</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +197,7 @@
     <MESSAGE value="【FEAT】1）call的用于函数类的继承 2） __proto__和prototype" />
     <MESSAGE value="【FEAT】1）setTimeout中的this的指向问题" />
     <MESSAGE value="【FIX】call的用法-对象的继承" />
-    <option name="LAST_COMMIT_MESSAGE" value="【FIX】call的用法-对象的继承" />
+    <MESSAGE value="【FIX】Bind的实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="【FIX】Bind的实现" />
   </component>
 </project>
