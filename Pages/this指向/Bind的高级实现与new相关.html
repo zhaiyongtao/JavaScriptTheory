@@ -38,23 +38,17 @@
         }
         let NOP = function () {
         }
-
         // 维护原型
-        if (this.prototype) {
-            console.log('new this()', new this())
-            console.log('this.prototype',this.prototype)
+        if (_this.prototype) {
+
             NOP.prototype = this.prototype
-            console.log('NOP.prototype',NOP.prototype)
         }
-        console.log('newFn.prototype',newFn.prototype)
-        console.log('new NOP()',new NOP())
         newFn.prototype = new NOP();
-        console.log('newFn.prototype = new NOP()', newFn.prototype)
-
-
+        console.log(
+            'newFn.prototype ',newFn.prototype
+        )
         // 函数被bind之后返回的是一个函数
         return newFn
-
     }
 
     let obj = {
@@ -62,17 +56,18 @@
         b: 5
     }
 
-    function addWithThis(...args) {
+    function addWithThis() {
         console.log('addWithThis', this)
-        // console.log('args', args)
         return this.a + this.b
     }
 
-    const resultFn = addWithThis.mybind(obj, 1, 2)
-
-    console.log(resultFn())
+    // const resultFn = addWithThis.mybind(obj, 1, 2)
+    //
+    // console.log(resultFn())
 
     // let fn = new resultFn()
+    console.log(Math.max.mybind(obj,1,2)())
+
 </script>
 </body>
 </html>

@@ -30,16 +30,16 @@ Function.prototype.mybind = function (context, ...args) {
 
     // 维护原型
     if (this.prototype) {
-        console.log('this.prototype',this.prototype)
         NOP.prototype = this.prototype
-        console.log('NOP.prototype',NOP.prototype)
     }
+
+
     newFn.prototype = new NOP()
-    console.log('new NOP()',new NOP())
-    console.log(this)
-    console.log('newFn.prototype',newFn.prototype)
+    console.log('newFn.prototype.__proto__=>new NOP().__proto__',newFn.prototype.__proto__ ==  new NOP().__proto__)
+    console.log('newFn.prototype.__proto__=>NOP.prototype',newFn.prototype.__proto__ ==  NOP.prototype)
 
-
+    console.log('newFn.prototype.__proto__=> this.prototype',newFn.prototype.__proto__ == this.prototype)
+    console.log('NOP.prototype.__proto__=> this.prototype',NOP.prototype.__proto__ == this.prototype)
     // 函数被bind之后返回的是一个函数
     return newFn
 
@@ -52,7 +52,6 @@ let obj = {
 
 function addWithThis(...args) {
     console.log('addWithThis', this)
-    // console.log('args', args)
     return this.a + this.b
 }
 
