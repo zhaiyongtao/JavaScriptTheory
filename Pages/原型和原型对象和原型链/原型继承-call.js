@@ -36,7 +36,11 @@ const newStuA = new StudentAcallStudent({name: 'newStuA', sex: 'female'})
 
 console.log(newStuA.name) // newStuA
 console.log(newStuA.getSex()) // StudentAcallStudent sex is female
-console.log(newStuA.sayHello()) // 报错，因为sayHello是Student原型对象上的方法，无法通过call让newStuA也具有这个方法，所以这不是继承
+//console.log(newStuA.sayHello()) // 报错，因为sayHello是Student原型对象上的方法，无法通过call让newStuA也具有这个方法，所以这不是继承
+console.log( StudentAcallStudent.prototype.__proto__ === Object.prototype)
+
+// 原型链
+// newStuA ==__proto__  =》  StudentAcallStudent.prototype ==__proto__ =》Object.prototype ==__proto__=》null
 
 // newStuA具有name属性的原理
 // function test (a) {

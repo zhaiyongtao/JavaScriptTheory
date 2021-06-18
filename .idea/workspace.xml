@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a929a589-289f-45bf-b615-9133b2874652" name="默认变更列表" comment="【FIX】原型继承">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pages/原型和原型对象和原型链/原型继承-原型链继承.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/原型和原型对象和原型链/原型继承.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/原型和原型对象和原型链/原型继承-call.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +23,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1sCLyRgKn9B6ltrV4IqI0bDscZ9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -34,7 +43,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/../JavaScriptTheory1/Pages/原型和原型对象和原型链" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -44,20 +53,17 @@
       <recent name="$PROJECT_DIR$/Pages/闭包面试题" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.原型继承.js">
-    <configuration name="Bind实现MDN版本.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/JavaScriptTheory/Pages/this指向/Bind实现MDN版本.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Node.js.原型继承-原型链继承.js">
     <configuration name="Bind的高级实现与new相关.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/JavaScriptTheory/Pages/this指向/Bind的高级实现与new相关.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="Bind的实现.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Pages/this指向/Bind的实现.js" working-dir="$PROJECT_DIR$/Pages/this指向">
+    <configuration name="原型继承-原型链继承.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Pages/原型和原型对象和原型链/原型继承-原型链继承.js" working-dir="$PROJECT_DIR$/Pages/原型和原型对象和原型链">
+      <method v="2" />
+    </configuration>
+    <configuration name="原型继承-call.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Pages/原型和原型对象和原型链/原型继承-call.js" working-dir="$PROJECT_DIR$/Pages/原型和原型对象和原型链">
       <method v="2" />
     </configuration>
     <configuration name="Bind的高级实现与new相关.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Pages/this指向/Bind的高级实现与new相关.js" working-dir="$PROJECT_DIR$/Pages/this指向">
-      <method v="2" />
-    </configuration>
-    <configuration name="原型继承.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Pages/原型和原型对象和原型链/原型继承.js" working-dir="$PROJECT_DIR$/Pages/原型和原型对象和原型链">
       <method v="2" />
     </configuration>
     <configuration name="箭头函数和普通函数.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Pages/this指向/箭头函数和普通函数.js" working-dir="$PROJECT_DIR$/Pages/this指向">
@@ -71,11 +77,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.原型继承.js" />
+        <item itemvalue="Node.js.原型继承-原型链继承.js" />
+        <item itemvalue="Node.js.原型继承-call.js" />
         <item itemvalue="Node.js.call的用法.js" />
         <item itemvalue="Node.js.Bind的高级实现与new相关.js" />
         <item itemvalue="JavaScript 调试.Bind的高级实现与new相关.html" />
-        <item itemvalue="JavaScript 调试.Bind实现MDN版本.html" />
       </list>
     </recent_temporary>
   </component>
@@ -227,5 +233,9 @@
     <MESSAGE value="【FIX】Bind的实现" />
     <MESSAGE value="【FIX】原型继承" />
     <option name="LAST_COMMIT_MESSAGE" value="【FIX】原型继承" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
