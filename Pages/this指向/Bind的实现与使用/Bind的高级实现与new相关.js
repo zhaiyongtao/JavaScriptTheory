@@ -20,7 +20,7 @@ Function.prototype.mybind = function (context, ...args) {
         // new 绑定等级高于显式绑定
         // 作为构造函数调用时，保留指向不做修改
         // 使用 instanceof 判断是否为构造函数调用
-        console.log('newFn this', this) // newFn方法中的的this指向是addWithThis，这里是经过处理的，下面代码中会维护原型
+        console.log('newFn this', this) //  new 的时候 newFn方法中的的this指向是newFn,但是此时的this.__proto__ => addWithThis
         // console.log(this instanceof newFn)
         // 判断对bind之后做什么操作，如果是直接调用，（fn()），将函数的this指向bind传入的对象。如果是new fn(),就将函数的this指向被bind的函数函数自己本身的this指向
         return _this.apply(this instanceof newFn ? this : context, args.concat(arg_))
@@ -51,7 +51,7 @@ let obj = {
 }
 
 function addWithThis(...args) {
-    console.log('addWithThis', this)
+    console.log('addWithThis输出', this)
     return this.a + this.b
 }
 

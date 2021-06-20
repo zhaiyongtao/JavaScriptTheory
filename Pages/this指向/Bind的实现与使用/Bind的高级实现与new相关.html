@@ -6,17 +6,9 @@
 </head>
 <body>
 <h2>
-  Bind的高级实现与new相关
+    Bind的高级实现与new相关
 </h2>
 <script>
-    /**
-     * Bind的高级实现与new相关$ - 描述
-     * @Author: BuzzLightyear.Z
-     * @Email: 501671900@qq.com
-     * @Date: 2021/6/10 2:11 下午
-     * @LastEditTime: 2021/6/10 2:11 下午
-     */
-// fn.bind(obj,..args),
     Function.prototype.mybind = function (context, ...args) {
 
         if (typeof this != 'function') {
@@ -31,7 +23,7 @@
             // new 绑定等级高于显式绑定
             // 作为构造函数调用时，保留指向不做修改
             // 使用 instanceof 判断是否为构造函数调用
-            console.log('newFn this', this) // newFn方法中的的this指向是addWithThis，这里是经过处理的，下面代码中会维护原型
+            console.log('newFn this', this) // new 的时候 newFn方法中的的this指向是newFn,但是此时的this.__proto__ => addWithThis
             // console.log(this instanceof newFn)
             // 判断对bind之后做什么操作，如果是直接调用，（fn()），将函数的this指向bind传入的对象。如果是new fn(),就将函数的this指向被bind的函数函数自己本身的this指向
             return _this.apply(this instanceof newFn ? this : context, args.concat(arg_))
@@ -40,12 +32,11 @@
         }
         // 维护原型
         if (_this.prototype) {
-
             NOP.prototype = this.prototype
         }
         newFn.prototype = new NOP();
         console.log(
-            'newFn.prototype ',newFn.prototype
+            'newFn.prototype ', newFn.prototype
         )
         // 函数被bind之后返回的是一个函数
         return newFn
@@ -57,16 +48,20 @@
     }
 
     function addWithThis() {
-        console.log('addWithThis', this)
+        console.log('addWithThis输出应该是以addWithThis为构造函数的实例对象', this)
+         console.log(this.__proto__.__proto__ ===  addWithThis.prototype )
+        console.log(addWithThis.prototype)
         return this.a + this.b
     }
 
-    // const resultFn = addWithThis.mybind(obj, 1, 2)
+
+
+    const resultFn = addWithThis.mybind(obj, 1, 2)
     //
     // console.log(resultFn())
 
-    // let fn = new resultFn()
-    console.log(Math.max.mybind(obj,1,2)())
+    let fn = new resultFn()
+    // console.log(Math.max.mybind(obj,1,2)())
 
 </script>
 </body>

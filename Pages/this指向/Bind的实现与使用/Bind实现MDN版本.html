@@ -13,8 +13,6 @@
     var ArrayPrototypeSlice = Array.prototype.slice;
     Function.prototype.MyMdnBind = function (otherThis) {
         if (typeof this !== 'function') {
-            // closest thing possible to the ECMAScript 5
-            // internal IsCallable function
             throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable');
         }
 
@@ -24,7 +22,7 @@
             fNOP = function () {
             },
             fBound = function () {
-                baseArgs.length = baseArgsLength; // reset to default base arguments
+                baseArgs.length = baseArgsLength;
                 baseArgs.push.apply(baseArgs, arguments);
                 console.log('fNOP.prototype.isPrototypeOf(this) ?', this)
                 return fToBind.apply(
@@ -33,7 +31,6 @@
             };
 
         if (this.prototype) {
-            debugger
             // 一些内置函数是没有protoType属性的
             fNOP.prototype = this.prototype;
             fBound.prototype = new fNOP();
@@ -47,21 +44,23 @@
         return this.a + this.b
     }
 
-    console.log('addWithThis.prototype', addWithThis.prototype)
+    let obj = {
+        a: 6,
+        b: 5
+    }
+    const resultFn = addWithThis.MyMdnBind(obj, 1, 2)
+    var fn = new resultFn()
+
+
+    // console.log(resultFn())
+    // console.log(Math.max.MyMdnBind(obj,1,2)())
+    // console.log('addWithThis.prototype', addWithThis.prototype)
     // Math.max.prototype= {a:1, b:2}
     // console.log( Math.max.constructor) // Math.max is not a constructor
     // console.log(Symbol.constructor)
     // console.log(new Symbol()) //Symbol is not a constructor
 
-    console.log('Math.max.prototype', Math.max.prototype)
-    let obj = {
-        a: 6,
-        b: 5
-    }
-    // const resultFn = addWithThis.MyMdnBind(obj, 1, 2)
-    // var fn = new resultFn()
-    // console.log(resultFn())
-    console.log(Math.max.MyMdnBind(obj,1,2)())
+    // console.log('Math.max.prototype', Math.max.prototype)
 </script>
 </body>
 </html>
