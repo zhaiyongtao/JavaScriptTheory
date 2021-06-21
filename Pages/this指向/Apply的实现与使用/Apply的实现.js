@@ -11,22 +11,31 @@ let obj = {
     b: 2
 }
 
-function getSum (a, b ,c) {
+function getSum(a, b, c) {
     console.log(a, b, c)
     return this.a + this.b
 }
 
 Function.prototype.myApply = function (context, args) {
     let _context = context || window;
-    console.log(typeof args)
-    console.log(args)
     let _this = this;
+    let result
+    _context.fn = _this
     if (typeof this !== 'function') {
-        throw  new TypeError('函数才能调用myapply')
+        throw new TypeError('函数才能调用myapply')
     }
-    if(args instanceof Array) {
-        console.log('111')
+    if (args && !(args instanceof Array)) {
+        throw new TypeError('如果存在,则参数必须为数组')
     }
+
+    if (!args) {
+        result = _context.fn()
+    } else {
+        result = _context.fn(...args)
+    }
+    delete _context.fn
+    return result
+
 }
 
-getSum.myApply(obj,[1,2,3])
+console.log(getSum.myApply(obj, [1]))

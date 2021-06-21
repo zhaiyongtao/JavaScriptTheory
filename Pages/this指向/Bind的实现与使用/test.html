@@ -10,13 +10,95 @@
         console.log('foo',this)
     }
 
-    function goo () {
-        console.log('goo',this)
-        foo.call(this)
+    let goo = {
+        a: 1
     }
 
+    const resultFn1  = foo.bind(goo)
 
-    new goo()
+    const rf1 = new resultFn1()
+
+    console.log('rf1',rf1)
+
+
+    Function.prototype.myBind = function (object) {
+        if (typeof this != 'function') {
+            throw 'caller must be a function'
+        }
+        let _this = this;
+        let _object = object || window
+        let args = Array.prototype.slice.call(arguments, 1)
+        let newFn = function () {
+            let newArgs = Array.prototype.slice.call(arguments, 1)
+            if (this instanceof _this) {
+                return _this.apply(this, args.concat(newArgs))
+            } else {
+                return _this.apply(_object, args.concat(newArgs))
+            }
+        }
+
+        let Nop = function () {
+        }
+
+        if (this.prototype) {
+            Nop.prototype = this.prototype
+            newFn.prototype = new Nop()
+            Nop.prototype = null;
+        }
+        return newFn
+    }
+
+    // Function.prototype.myBind = function(obj, ...args){
+    //     var fn = this;
+    //     //仿制一个Person的构造函数
+    //     var F = function(){};
+    //     if(fn.prototype){
+    //         //将Person的原型全部拷贝到F
+    //         F.prototype = fn.prototype;
+    //     }
+    //     var res = function(){
+    //         //this: BindPerson{}对象 / window
+    //         //F: function Person
+    //         var callObj = F.prototype.isPrototypeOf(this) ? this : obj;
+    //         return fn.call(callObj, ...args)
+    //     }
+    //     res.prototype = new F();
+    //     return res
+    // }
+
+    // Function.prototype.myBind = function(otherThis) {
+    //     if (typeof this !== 'function') {
+    //         // closest thing possible to the ECMAScript 5
+    //         // internal IsCallable function
+    //         throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable');
+    //     }
+    //
+    //     var baseArgs= Array.prototype.slice.call(arguments, 1),
+    //         baseArgsLength = baseArgs.length,
+    //         fToBind = this,
+    //         fNOP    = function() {},
+    //         fBound  = function() {
+    //             baseArgs.length = baseArgsLength; // reset to default base arguments
+    //             baseArgs.push.apply(baseArgs, arguments);
+    //             return fToBind.apply(
+    //                 fNOP.prototype.isPrototypeOf(this) ? this : otherThis, baseArgs
+    //             );
+    //         };
+    //
+    //     if (this.prototype) {
+    //         // Function.prototype doesn't have a prototype property
+    //         fNOP.prototype = this.prototype;
+    //     }
+    //     fBound.prototype = new fNOP();
+    //
+    //     return fBound;
+    // };
+
+    const resultFn2  = foo.myBind(goo)
+
+    const rf2 = new resultFn2()
+
+    console.log('rf2',rf2)
 
 </script>
 </body>

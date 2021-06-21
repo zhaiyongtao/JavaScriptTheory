@@ -28,7 +28,6 @@ Function.prototype.myBind = function (object) {
     if (this.prototype) {
         Nop.prototype = this.prototype
         newFn.prototype = new Nop()
-        newFn.prototype.constructor = newFn;
     }
     return newFn
 }

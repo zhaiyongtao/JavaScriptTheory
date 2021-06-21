@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a929a589-289f-45bf-b615-9133b2874652" name="默认变更列表" comment="【FIX】原型继承">
-      <change afterPath="$PROJECT_DIR$/Pages/this指向/Apply的实现与使用/Apply的实现与使用.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/Bind的实现-最终版.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pages/this指向/Apply的实现与使用/Apply的使用.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/Bind的高级实现与new相关.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/Bind的高级实现与new相关.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/this指向/Call的实现与使用/myCall.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/this指向/Call的实现与使用/myCall.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/this指向/Apply的实现与使用/Apply的实现与使用.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/this指向/Apply的实现与使用/Apply的实现.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/Bind的实现-最终版.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/Bind的实现-最终版.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,29 +58,29 @@
       <recent name="$PROJECT_DIR$/Pages/闭包面试题" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.Apply的实现与使用.js">
-    <configuration name="Bind的高级实现与new相关.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/JavaScriptTheory/Pages/this指向/Bind的实现与使用/Bind的高级实现与new相关.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="Node.js.Apply的实现.js">
+    <configuration name="test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/JavaScriptTheory/Pages/this指向/Bind的实现与使用/test.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="Apply的实现与使用.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Pages/this指向/Apply的实现与使用/Apply的实现与使用.js" working-dir="$PROJECT_DIR$/Pages/this指向/Apply的实现与使用">
+    <configuration name="Apply的实现.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Pages/this指向/Apply的实现与使用/Apply的实现.js" working-dir="$PROJECT_DIR$/Pages/this指向/Apply的实现与使用">
       <method v="2" />
     </configuration>
-    <configuration name="Bind的实现-最终版.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/Bind的实现-最终版.js" working-dir="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用">
-      <method v="2" />
-    </configuration>
-    <configuration name="Bind的高级实现与new相关.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/Bind的高级实现与new相关.js" working-dir="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用">
+    <configuration name="Apply的使用.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Pages/this指向/Apply的实现与使用/Apply的使用.js" working-dir="$PROJECT_DIR$/Pages/this指向/Apply的实现与使用">
       <method v="2" />
     </configuration>
     <configuration name="myCall.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Pages/this指向/Call的实现与使用/myCall.js" working-dir="$PROJECT_DIR$/Pages/this指向/Call的实现与使用">
       <method v="2" />
     </configuration>
+    <configuration name="test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/test.js" working-dir="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.Apply的实现与使用.js" />
+        <item itemvalue="Node.js.Apply的实现.js" />
+        <item itemvalue="Node.js.Apply的使用.js" />
+        <item itemvalue="JavaScript 调试.test.html" />
+        <item itemvalue="Node.js.test.js" />
         <item itemvalue="Node.js.myCall.js" />
-        <item itemvalue="Node.js.Bind的实现-最终版.js" />
-        <item itemvalue="Node.js.Bind的高级实现与new相关.js" />
-        <item itemvalue="JavaScript 调试.Bind的高级实现与new相关.html" />
       </list>
     </recent_temporary>
   </component>
@@ -105,6 +106,7 @@
       <workItem from="1622622466840" duration="58884000" />
       <workItem from="1623858698998" duration="3177000" />
       <workItem from="1624194513639" duration="11009000" />
+      <workItem from="1624283638193" duration="4747000" />
     </task>
     <task id="LOCAL-00001" summary="【FEAT】闭包面试题">
       <created>1621588946228</created>
