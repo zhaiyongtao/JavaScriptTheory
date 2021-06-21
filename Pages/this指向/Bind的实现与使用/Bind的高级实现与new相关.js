@@ -52,6 +52,7 @@ let obj = {
 
 function addWithThis(...args) {
     console.log('addWithThis输出', this)
+    console.log(this.a + this.b)
     return this.a + this.b
 }
 

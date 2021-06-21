@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a929a589-289f-45bf-b615-9133b2874652" name="默认变更列表" comment="【FIX】原型继承">
-      <change afterPath="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/Bind和New的优先级.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/Bind和New的优先级.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pages/this指向/Apply的实现与使用/Apply的实现与使用.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/Bind的实现-最终版.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/this指向/Bind和New的优先级.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/this指向/Bind实现MDN版本.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/Bind实现MDN版本.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/this指向/Bind的基本使用.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/Bind的基本使用.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/this指向/Bind的实现.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/Bind的实现.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/this指向/Bind的高级实现与new相关.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/Bind的高级实现与new相关.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/this指向/Bind的高级实现与new相关.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/Bind的高级实现与new相关.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/this指向/CallFunction对象的继承.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/this指向/Call的实现与使用/CallFunction对象的继承.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/this指向/call和箭头函数.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/this指向/Call的实现与使用/call和箭头函数.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/this指向/call的用法.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/this指向/Call的实现与使用/call的用法.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/this指向/myCall.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/this指向/Call的实现与使用/myCall.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/原型和原型对象和原型链/原型继承-原型链继承.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/原型和原型对象和原型链/原型继承-原型链继承.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/Bind的高级实现与new相关.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/Bind的高级实现与new相关.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/this指向/Call的实现与使用/myCall.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/this指向/Call的实现与使用/myCall.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +17,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -67,32 +57,29 @@
       <recent name="$PROJECT_DIR$/Pages/闭包面试题" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript 调试.Bind实现MDN版本.html">
-    <configuration name="Bind实现MDN版本.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/JavaScriptTheory/Pages/this指向/Bind的实现与使用/Bind实现MDN版本.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Node.js.Apply的实现与使用.js">
     <configuration name="Bind的高级实现与new相关.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/JavaScriptTheory/Pages/this指向/Bind的实现与使用/Bind的高级实现与new相关.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/JavaScriptTheory/Pages/this指向/Bind的实现与使用/test.html" useBuiltInWebServerPort="true">
+    <configuration name="Apply的实现与使用.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Pages/this指向/Apply的实现与使用/Apply的实现与使用.js" working-dir="$PROJECT_DIR$/Pages/this指向/Apply的实现与使用">
+      <method v="2" />
+    </configuration>
+    <configuration name="Bind的实现-最终版.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/Bind的实现-最终版.js" working-dir="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用">
       <method v="2" />
     </configuration>
     <configuration name="Bind的高级实现与new相关.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/Bind的高级实现与new相关.js" working-dir="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用">
       <method v="2" />
     </configuration>
-    <configuration name="箭头函数和普通函数.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Pages/this指向/箭头函数和普通函数.js" working-dir="$PROJECT_DIR$/Pages/this指向">
-      <method v="2" />
-    </configuration>
-    <configuration name="test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用/test.js" working-dir="$PROJECT_DIR$/Pages/this指向/Bind的实现与使用">
+    <configuration name="myCall.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Pages/this指向/Call的实现与使用/myCall.js" working-dir="$PROJECT_DIR$/Pages/this指向/Call的实现与使用">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript 调试.Bind实现MDN版本.html" />
-        <item itemvalue="JavaScript 调试.Bind的高级实现与new相关.html" />
-        <item itemvalue="JavaScript 调试.test.html" />
-        <item itemvalue="Node.js.test.js" />
+        <item itemvalue="Node.js.Apply的实现与使用.js" />
+        <item itemvalue="Node.js.myCall.js" />
+        <item itemvalue="Node.js.Bind的实现-最终版.js" />
         <item itemvalue="Node.js.Bind的高级实现与new相关.js" />
+        <item itemvalue="JavaScript 调试.Bind的高级实现与new相关.html" />
       </list>
     </recent_temporary>
   </component>

@@ -42,10 +42,13 @@ Function.prototype.myCall = function (context) {
 
 Function.prototype.myCall = function (context, ...args) {
   // this 指向调用myCall的方法（方法也是对象，this的指向指向调用它的对象）
-  context.func = this
+  let _context = context || global
+  _context.func = this
   console.log(this)
-  context.func(args)
-  delete context.func
+  console.log(args)
+  console.log(Array.prototype.slice.call(arguments,1))
+  _context.func(args)
+  delete _context.func
 }
 
 showName.myCall(me, 'zyt')
