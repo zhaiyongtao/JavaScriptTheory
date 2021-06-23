@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>回流(重排)和重绘</title>
+</head>
+<body>
+<div id="div1" style="width: 200px; height: 200px; line-height: 200px; text-align: center; border: 1px solid red; color: red">
+    回流(重排)和重绘
+</div>
+
+<script>
+    let targetDom  = document.getElementById('div1')
+
+    // 重排（回流）
+    setTimeout(function (){
+        targetDom.style.width = '300px'
+    }, 2000)
+
+    // 重绘
+
+    setTimeout(function (){
+        targetDom.style.color = 'blue'
+    }, 1000)
+</script>
+</body>
+</html>
