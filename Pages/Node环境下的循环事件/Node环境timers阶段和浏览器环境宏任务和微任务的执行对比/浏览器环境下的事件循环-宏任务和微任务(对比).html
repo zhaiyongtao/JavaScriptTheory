@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浏览器环境下的事件循环-宏任务和微任务(对比)</title>
+</head>
+<body>
+<h2>
+    浏览器环境下的事件循环-宏任务和微任务(对比)</br>
+    Node11开始，timers 阶段的setTimeout、setInterval等函数派发的任务、包括 setImmediate 派发的任务，都被修改为：一旦执行完当前阶段的一个任务，就立刻执行微任务队列。
+</h2>
+
+<script>
+
+    setTimeout(() => {
+        console.log('Timeout 1')
+    })
+
+    setTimeout(() => {
+        console.log('Timeout2')
+    })
+
+    setTimeout(() => {
+        console.log('Timeout3')
+        Promise.resolve().then(() => {
+            console.log('Promise 1')
+        }).then(() => {
+            console.log('Promise 2')
+        })
+    })
+
+    setTimeout(() => {
+        console.log('Timeout 4')
+    })
+
+    // 输出
+    // Timeout 1
+    // Timeout2
+    // Timeout3
+    // Promise 1
+    // Promise 2
+    // Timeout 4
+</script>
+
+</body>
+</html>
+
