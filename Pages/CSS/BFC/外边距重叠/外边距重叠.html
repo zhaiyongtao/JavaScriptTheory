@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>外边距重叠</title>
+    <style>
+        .box {
+            background: pink;
+            border: 1px solid;
+
+        }
+
+        .box1 {
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background: red;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background: aqua;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="box1">
+        BOX2
+    </div>
+    <div class="box2">
+        BOX2
+    </div>
+</div>
+</body>
+</html>
