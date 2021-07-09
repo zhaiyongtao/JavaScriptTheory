@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>解决外边距重叠</title>
+  <style>
+    .box {
+      background: pink;
+      border: 1px solid;
+
+    }
+
+    .box1 {
+      width: 100px;
+      height: 100px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      background: red;
+    }
+
+    .box2 {
+      width: 100px;
+      height: 100px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      background: aqua;
+    }
+    .boxContainer {
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <div class="boxContainer">
+    <div class="box1">
+      BOX1
+    </div>
+  </div>
+  <div class="boxContainer">
+    <div class="box2">
+      BOX2
+    </div>
+  </div>
+</div>
+</body>
+</html>
