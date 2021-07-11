@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>媒体查询</title>
+    <style>
+        .left,.right {
+            height: 300px;
+            float: left;
+        }
+
+        .right {
+            width: 150px;
+            background-color: red;
+        }
+
+        .left {
+            width: 200px;
+            background-color: yellow;
+        }
+
+        @media screen and (max-width: 320px){
+            .right{
+                display: none;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            。right {
+                width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="left">
+        LEFT
+    </div>
+    <div class="right">
+        RIGHT
+    </div>
+</div>
+
+</body>
+</html>
