@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rem计算响应式布局</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <style>
+    .box {
+      border: 1rem solid greenyellow;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  rem计算响应式布局
+</div>
+<script>
+  function renderHtml () {
+    // 获取根节点
+    const docHtml = document.documentElement;
+    // 获取视觉窗口大小
+    const docWidth = docHtml.getBoundingClientRect().width;
+    const rem = docWidth / 100;
+    docHtml.style.fontSize = rem + 'px'
+  }
+  window.addEventListener('resize',renderHtml)
+</script>
+</body>
+</html>
