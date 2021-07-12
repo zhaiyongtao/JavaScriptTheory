@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>单例模式真题解读</title>
+</head>
+<style>
+  #modal {
+    height: 300px;
+    width: 300px;
+    line-height: 300px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid red;
+    text-align: center;
+  }
+</style>
+<body>
+<button id='open'>打开 Modal 弹层</button>
+<button id='close'>关闭 Modal 弹层</button>
+
+<script>
+  // 点击打开按钮展示模态框
+  document.getElementById('open').addEventListener('click', function() {
+    // 未点击则不创建modal实例，避免不必要的内存占用;此处不用 new Modal 的形式调用也可以，和 Storage 同理
+    const modal = createModal()
+    modal.style.display = 'block'
+  })
+
+  // 点击关闭按钮隐藏模态框
+  document.getElementById('close').addEventListener('click', function() {
+    const modal = createModal()
+    if(modal) {
+      modal.style.display = 'none'
+    }
+  })
+
+  // 核心逻辑，这里采用了闭包思路来实现单例模式
+  const createModal = (function() {
+    let modal = null
+    return function() {
+      if(!modal) {
+        modal = document.createElement('div')
+        modal.innerHTML = 'Modal模态框，全局唯一'
+        modal.id = 'modal'
+        modal.style.display = 'none'
+        document.body.appendChild(modal)
+      }
+      return modal
+    }
+  })()
+</script>
+</body>
+</html>
