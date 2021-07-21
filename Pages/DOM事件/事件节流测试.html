@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件节流测试</title>
+</head>
+<body>
+  <div>
+    <div class="divB">
+      123455
+    </div>
+  </div>
+<script>
+  function Throttle(callback, time) {
+    let last = 0
+    return function () {
+
+      const context = this;
+      const args = arguments
+        const now = new Date().getTime();
+        console.log(now)
+        console.log(last)
+        console.log(now -last)
+      if (now-last >= time) {
+          last = now;
+        callback.apply(context, args)
+      }
+    }
+  }
+  const divB = document.getElementsByClassName('divB')[0]
+  console.log(divB)
+  divB.addEventListener('click',Throttle(() => {console.log('我被点击了，我被节流了')},10000))
+
+
+</script>
+</body>
+</html>
