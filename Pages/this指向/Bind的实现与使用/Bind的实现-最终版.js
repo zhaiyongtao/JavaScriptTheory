@@ -48,9 +48,9 @@ getCount.prototype.getResult = function () {
 }
 
 const resultFn =getCount.myBind(obj, 3,4)
-
+//
 // console.log('输出resultFn执行结果', resultFn())
 
 const rf = new resultFn()
 
-rf.getResult() // rf实例对象可以获取到getCount原型上的方法
+// rf.getResult() // rf实例对象可以获取到getCount原型上的方法
