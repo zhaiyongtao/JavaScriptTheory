@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>div实现textarea</title>
+    <style>
+        .div-textarea {
+            width: 200px;
+            min-height: 200px;
+            border: 1px solid black;
+            padding: 4px;
+            /*如果不使用outline输入的时候会有聚焦圈*/
+            outline: 0;
+        }
+
+        .div-textarea:empty::before {
+            content:attr(placeholder);
+            color:#999;
+        }
+    </style>
+</head>
+<body>
+<!--    <div></div>标签中不能有换行-->
+    <div class="div-textarea" contenteditable="true" placeholder="请输入内容"></div>
+</body>
+</html>
