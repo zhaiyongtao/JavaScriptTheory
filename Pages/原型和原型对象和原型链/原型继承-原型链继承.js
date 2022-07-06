@@ -29,6 +29,8 @@ function Nop () {}
 Nop.prototype = Student.prototype
 
 StudentA.prototype = new Nop()
+StudentA.prototype.__proto__ === Nop.prototype;
+
 // 这里没有StudentA.prototype === Student.prototype 是为了避免原型链上的对象共享。
 // 原型对象定义着实例对象共享的方法属性和方法.StudentA和Student的原型对象上都有着属于自己实例对象的共享的属性和方法，不能混在一起。
 // 所以我们可以使用原型链的继承,让Student成为StudentA原型链上的父级
