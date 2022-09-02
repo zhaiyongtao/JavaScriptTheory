@@ -16,3 +16,4 @@ var new2 = function(func){
         return o
     }
 }
+n

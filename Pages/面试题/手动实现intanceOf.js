@@ -16,3 +16,4 @@ function newInstanceOf(instance, clazz) {
     }
     return false
 }
+
